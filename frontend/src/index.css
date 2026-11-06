@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { font-family: "Instrument Sans", ui-sans-serif, system-ui, sans-serif; background: #F4F5F7; }
+  body { margin: 0; min-width: 320px; color: #121826; background: #F4F5F7; -webkit-font-smoothing: antialiased; line-height: 1.55; }
+  h1,h2,h3,h4,.font-display { font-family: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif; font-weight: 600; letter-spacing: -0.02em; line-height: 1.15; }
+  * { box-sizing: border-box; }
+  *:focus-visible { outline: 2px solid #0E6B5C; outline-offset: 2px; }
+  ::selection { background: rgba(14,107,92,.18); }
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-thumb { background: #CBD0D8; border-radius: 999px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  @media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation-duration:.001ms!important; animation-iteration-count:1!important; transition-duration:.001ms!important; } }
+}
+
+@layer components {
+  /* Kept class names so every page picks up the new look. Flat surfaces, hairline borders, no gradients. */
+  .app-shell, .app-page-bg { background: #F4F5F7; }
+  .app-panel { background: #fff; border: 1px solid #E2E5EA; }
+  .app-gradient { background: #0E6B5C; }
+  .app-gradient-soft { background: #EAF2F0; }
+  .app-input { border: 1px solid #D5DAE1; background: #fff; }
+  .app-input:focus { border-color: #0E6B5C; box-shadow: 0 0 0 3px rgba(14,107,92,.14); }
+  .app-logo-full { object-fit: contain; object-position: center; }
+}
